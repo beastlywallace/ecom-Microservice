@@ -1,18 +1,12 @@
 spring:
     application:
         name: user-service
+    data:
+        mongodb:
+#            uri: mongodb+srv://akonakpevwe_db_user:Superboy8841@user-data.weqihkp.mongodb.net/userdb?appName=user-data
+            uri: mongodb://localhost:27017/ecom_user
+            database: ecom_user
 
-    datasource:
-        url: jdbc:h2:mem:test
-
-    h2:
-        console:
-            enabled: true
-
-    jpa:
-        show-sql: true
-        hibernate:
-            ddl-auto: create
 
 server:
     port: 8082

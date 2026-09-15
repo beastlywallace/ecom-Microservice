@@ -34,13 +34,14 @@ public class UserService {
                  userRepository.save(user );
     }
 
-    public Optional<UserResponse> fetchAUser(Long id) {
+    public Optional<UserResponse> fetchAUser(String id) {
         return userRepository.findById(id)
                 .map(this::mapToUserResponse);
     }
-    public boolean updateUser(Long id, UserRequest updatedUser){
+    public boolean updateUser(String id, UserRequest updatedUser){
         return userRepository.findById(id)
                 .map(existingUser-> {
+                    updateUserFromRequest(existingUser, updatedUser);
                     userRepository.save(existingUser);
                     return true;
                 }).orElse(false);
@@ -67,7 +68,7 @@ public class UserService {
 
     private UserResponse  mapToUserResponse(User user){
         UserResponse response = new UserResponse();
-        response.setId((user.getId()));
+        response.setId(user.getId());
         response.setFirstName(user.getFirstName());
         response.setLastName(user.getLastName());
         response.setEmail(user.getEmail());
