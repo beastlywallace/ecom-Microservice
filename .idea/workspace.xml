@@ -5,32 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dad50abb-03f8-4b2d-9af3-c5218fe140d4" name="Changes" comment="docker compose and microservice connection">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/ecommerce/order/controllers/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/ecommerce/order/dto/OrderItemDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/ecommerce/order/dto/OrderResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/ecommerce/order/model/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/ecommerce/order/repository/OrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/ecommerce/order/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/src/test/java/com/ecommerce/order/service/CartServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/commerce/user/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/commerce/user/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/commerce/user/dto/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/commerce/user/dto/UserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/commerce/user/models/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/commerce/user/models/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/commerce/user/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/commerce/user/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/commerce/user/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/commerce/user/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/commerce/user/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/commerce/user/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +41,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.ConfigServerApplication.executor&quot;: &quot;Run&quot;,
     &quot;Application.OrderApplication.executor&quot;: &quot;Run&quot;,
     &quot;Application.ProductApplication.executor&quot;: &quot;Run&quot;,
     &quot;Application.UserApplication.executor&quot;: &quot;Run&quot;,
@@ -95,6 +76,25 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.UserApplication">
+    <configuration name="ConfigServerApplication" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.example.configserver.ConfigserverApplication" />
+      <module name="configserver" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrderApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ecommerce.order.OrderApplication" />
       <module name="order" />
@@ -136,8 +136,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.UserApplication" />
         <item itemvalue="Application.ProductApplication" />
+        <item itemvalue="Application.UserApplication" />
         <item itemvalue="Application.OrderApplication" />
       </list>
     </recent_temporary>
