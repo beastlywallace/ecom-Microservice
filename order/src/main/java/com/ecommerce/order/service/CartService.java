@@ -1,6 +1,8 @@
 package com.ecommerce.order.service;
 
+import com.ecommerce.order.clients.ProductServiceClient;
 import com.ecommerce.order.dto.CartItemRequest;
+import com.ecommerce.order.dto.ProductResponse;
 import com.ecommerce.order.model.CartItem;
 
 import com.ecommerce.order.repository.CartItemRepository;
@@ -8,6 +10,8 @@ import com.ecommerce.order.repository.CartItemRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestClientException;
+import org.springframework.web.client.RestClientResponseException;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -17,9 +21,20 @@ import java.util.List;
 @Transactional
 public class CartService {
     private final CartItemRepository cartItemRepository;
-
+    private final ProductServiceClient productServiceClient;
 
     public boolean addToCart(String userId, CartItemRequest request) {
+        // Look for product
+        ProductResponse productResponse;
+        try {
+            productResponse = productServiceClient.getProductDetails(request.getProductId());
+        } catch (RestClientException e) {
+            return false;
+        }
+        if (productResponse == null
+                || productResponse.getStockQuantity() == null
+                || productResponse.getStockQuantity() < request.getQuantity())
+            return false;
         if (userId != null) userId = userId.trim();
         String productId = request.getProductId() != null ? request.getProductId().trim() : null;
 

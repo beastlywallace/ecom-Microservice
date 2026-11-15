@@ -4,19 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dad50abb-03f8-4b2d-9af3-c5218fe140d4" name="Changes" comment="docker compose and microservice connection">
+    <list default="true" id="dad50abb-03f8-4b2d-9af3-c5218fe140d4" name="Changes" comment="externalise .env variables">
+      <change afterPath="$PROJECT_DIR$/additional/interservice/consumer/src/main/java/com/example/consumer/feign/FeignController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/additional/interservice/consumer/src/main/java/com/example/consumer/feign/ProviderFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/additional/interservice/consumer/src/main/java/com/example/consumer/httpInterface/HttpInterfaceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/additional/interservice/consumer/src/main/java/com/example/consumer/httpInterface/HttpInterfaceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/additional/interservice/consumer/src/main/java/com/example/consumer/httpInterface/ProviderHttpInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/additional/interservice/consumer/src/main/java/com/example/consumer/restClient/ProviderRestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/additional/interservice/consumer/src/main/java/com/example/consumer/restClient/RestClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/additional/interservice/consumer/src/main/java/com/example/consumer/restClient/RestClientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/additional/interservice/consumer/src/main/java/com/example/consumer/webClient/ProviderWebClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/additional/interservice/consumer/src/main/java/com/example/consumer/webClient/WebClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/additional/interservice/consumer/src/main/java/com/example/consumer/webClient/WebClientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/additional/interservice/provider/src/main/java/com/example/provider/InstanceController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/order/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/ecommerce/order/clients/ProductServiceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/ecommerce/order/clients/ProductServiceClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/src/main/java/com/ecommerce/order/dto/ProductResponse.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/product/.env" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/user/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/order-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/order-service.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/product-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/product-service.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/user-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/user-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/order/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/src/main/java/com/ecommerce/order/controllers/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/com/ecommerce/order/controllers/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/src/main/java/com/ecommerce/order/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/java/com/ecommerce/order/service/CartService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/ecommerce/product/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/ecommerce/product/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/ecommerce/product/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/ecommerce/product/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/src/main/java/com/ecommerce/product/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product/src/main/java/com/ecommerce/product/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/user/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/commerce/user/config/MongoConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,9 +52,29 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;beastlywallace&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:beastlywallace/ecom-Microservice.git&quot;,
+    &quot;accountId&quot;: &quot;0725a4ec-ef72-4c51-ba79-52c5365d1d6a&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -49,6 +97,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ConfigServerApplication.executor": "Run",
+    "Application.EurekaApplication.executor": "Run",
     "Application.OrderApplication.executor": "Run",
     "Application.ProductApplication.executor": "Run",
     "Application.UserApplication.executor": "Run",
@@ -62,9 +111,9 @@
     "com.codeium.enabled": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/user/Documents/ecomMicroservice/order",
+    "last_opened_file_path": "/Users/user/Documents/ecomMicroservice",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
@@ -75,6 +124,9 @@
       <recent name="$PROJECT_DIR$/order" />
       <recent name="$PROJECT_DIR$/configserver/src/main/resources/config" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ecommerce.order.dto" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -90,6 +142,25 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.example.configserver.ConfigserverApplication" />
       <module name="configserver" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaApplication" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.ecomance.eureka.EurekaApplication" />
+      <module name="eureka" />
       <extension name="net.ashald.envfile">
         <option name="IS_ENABLED" value="false" />
         <option name="IS_SUBST" value="false" />
@@ -182,11 +253,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.EurekaApplication" />
+      <item itemvalue="Application.ConfigServerApplication" />
+      <item itemvalue="Application.OrderApplication" />
+      <item itemvalue="Application.ProductApplication" />
+      <item itemvalue="Application.UserApplication" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.UserApplication" />
-        <item itemvalue="Application.ProductApplication" />
         <item itemvalue="Application.OrderApplication" />
+        <item itemvalue="Application.ProductApplication" />
+        <item itemvalue="Application.UserApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -207,7 +285,15 @@
       <option name="project" value="LOCAL" />
       <updated>1788090256438</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="externalise .env variables">
+      <option name="closed" value="true" />
+      <created>1791748711548</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1791748711548</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +302,23 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cart item service and order" />
     <MESSAGE value="docker compose and microservice connection" />
-    <option name="LAST_COMMIT_MESSAGE" value="docker compose and microservice connection" />
+    <MESSAGE value="externalise .env variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="externalise .env variables" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order/src/main/java/com/ecommerce/order/controllers/CartController.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order/src/main/java/com/ecommerce/order/controllers/CartController.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
